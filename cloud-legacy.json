@@ -1,0 +1,40 @@
+{
+ "DestinationType" : "virtual",
+ "PartitionLayout" : [
+   { "disk" : "fabsclear-cloud-27100.img",
+   "partition" : 1,
+   "size" : "64M",
+   "type" : "EFI" },
+   { "disk" : "fabsclear-cloud-27100.img",
+     "partition" : 2,
+     "size" : "950M",
+     "type" : "linux" }
+ ],
+ "FilesystemTypes" : [
+   { "disk" : "fabsclear-cloud-27100.img",
+   "partition" : 1,
+   "type" : "vfat" },
+   { "disk" : "fabsclear-cloud-27100.img",
+     "partition" : 2,
+     "type" : "ext4" }
+ ],
+ "PartitionMountPoints" : [
+   { "disk" : "fabsclear-cloud-27100.img",
+   "partition" : 1,
+   "mount" : "/boot" },
+   { "disk" : "fabsclear-cloud-27100.img",
+     "partition" : 2,
+     "mount" : "/" }
+ ],
+ "Version": 27100,
+ "Bundles": [
+   "kernel-kvm",
+   "os-core",
+   "os-core-update",
+   "os-cloudguest",
+   "openssh-server",
+   "editors",
+   "bootloader"
+ ],
+ "LegacyBios": true
+}
