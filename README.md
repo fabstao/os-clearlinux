@@ -7,9 +7,8 @@ Clone:
 ```
 git clone <git URL>
 ```
-The .xz file is a usable image with cloud-init for Openstack (could work with other cloud-init compatible clouds)
 
-To create your own image you can use the cloud.json template. The cloud-legacy.json template is for BIOS boot, otherwise you need to enable UEFI boot in your Openstack cloud.
+To create your own image you can use the cloud-efi.json template. The cloud-legacy.json template is for BIOS boot, otherwise you need to enable UEFI boot in your Openstack cloud.
 
 Example assuming you have openstack CLI tools installed and rc file loaded:
 
