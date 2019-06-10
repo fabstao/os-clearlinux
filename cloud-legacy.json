@@ -13,7 +13,11 @@
  "FilesystemTypes" : [
    { "disk" : "fabsclear-cloud-29820.img",
    "partition" : 1,
+<<<<<<< HEAD
    "type" : "ext4" },
+=======
+   "type" : "vfat" },
+>>>>>>> 80b95944a1b81c0f5d7a7afa1c05d13437bfbafc
    { "disk" : "fabsclear-cloud-29820.img",
      "partition" : 2,
      "type" : "ext4" }
@@ -36,6 +40,10 @@
    "vim",
    "bootloader"
  ],
+<<<<<<< HEAD
  "PostNoChroot": ["./ucd.sh"],
+=======
+ "PostNonChroot": ["./ucd.sh"],
+>>>>>>> 80b95944a1b81c0f5d7a7afa1c05d13437bfbafc
  "LegacyBios": true
 }
