@@ -28,11 +28,7 @@
                 "openssh-server",
                 "bootloader",
                 "sysadmin-basic",
-<<<<<<< HEAD
                 "vim",
                 "network-basic"],
     "PostNonChroot": ["./ucd.sh"]
-=======
-                "network-basic"],
->>>>>>> 80b95944a1b81c0f5d7a7afa1c05d13437bfbafc
 }
