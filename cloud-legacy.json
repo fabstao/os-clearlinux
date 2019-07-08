@@ -1,32 +1,32 @@
 {
  "DestinationType" : "virtual",
  "PartitionLayout" : [
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
    "partition" : 1,
    "size" : "600M",
    "type" : "linux" },
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
      "partition" : 2,
      "size" : "2100M",
      "type" : "linux" }
  ],
  "FilesystemTypes" : [
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
    "partition" : 1,
    "type" : "ext4" },
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
      "partition" : 2,
      "type" : "ext4" }
  ],
  "PartitionMountPoints" : [
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
    "partition" : 1,
    "mount" : "/boot" },
-   { "disk" : "fabsclear-cloud-29820.img",
+   { "disk" : "oslegacy-cloud.img",
      "partition" : 2,
      "mount" : "/" }
  ],
- "Version": 29820,
+ "Version": 30260,
  "Bundles": [
    "kernel-kvm",
    "os-core",
