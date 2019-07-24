@@ -1,5 +1,15 @@
 # Custom Openstack ClearLinux image
 
+## Requirements
+
+Current ClearLinux host with ister.py installed (os-installer bundle):
+
+```
+$ sudo swupd update
+$ sudo swupd bundle-add os-installer
+```
+
+
 ## Use
 
 Clone:
