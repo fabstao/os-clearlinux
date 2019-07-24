@@ -1,0 +1,45 @@
+{
+ "DestinationType" : "virtual",
+ "PartitionLayout" : [
+   { "disk" : "oscd-clr-cloud.img",
+   "partition" : 1,
+   "size" : "600M",
+   "type" : "linux" },
+   { "disk" : "oscd-clr-cloud.img",
+     "partition" : 2,
+     "size" : "2100M",
+     "type" : "linux" }
+ ],
+ "FilesystemTypes" : [
+   { "disk" : "oscd-clr-cloud.img",
+   "partition" : 1,
+   "type" : "ext4" },
+   { "disk" : "oscd-clr-cloud.img",
+     "partition" : 2,
+     "type" : "ext4" }
+ ],
+ "PartitionMountPoints" : [
+   { "disk" : "oscd-clr-cloud.img",
+   "partition" : 1,
+   "mount" : "/boot" },
+   { "disk" : "oscd-clr-cloud.img",
+     "partition" : 2,
+     "mount" : "/" }
+ ],
+ "Version": 30480,
+ "Bundles": [
+   "kernel-kvm",
+   "os-core",
+   "os-core-update",
+   "clr-network-troubleshooter",
+   "openssh-server",
+   "vim",
+   "git",
+   "sudo",
+   "bootloader"
+ ],
+ "PostNoChroot": ["./oscd.sh"],
+ "LegacyBios": true
+}
+	
+	

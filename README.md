@@ -10,11 +10,15 @@ git clone <git URL>
 
 To create your own image you can use the cloud-efi.json template. The cloud-legacy.json template is for BIOS boot, otherwise you need to enable UEFI boot in your Openstack cloud.
 
+The template oscd.json is for BIOS boot and Openstack style ConfigDrive (fake cd).
+
 Example assuming you have openstack CLI tools installed and rc file loaded:
 
 ```
-$ sudo -E ister.py -t cloud-efi.json
-$ openstack image create Clear29810 --file fabscloud29810.img.img --min-disk 10 --min-ram 1000 --container-format bare --disk-format qcow2  --property 'config_drive=true' --property 'hw_firmware_type=uefi'
+$ sudo -E ./create.sh
+$ sudo umount /tmp/oscd
+$ openstack image create Clear30480 --file oscd-clr-cloudimage.img --min-disk 8 --min-ram 1000 --container-format bare --disk-format qcow2  --property 'img_config_drive=mandatory' 
+
 ```
 
 
