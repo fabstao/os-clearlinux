@@ -10,7 +10,7 @@ git clone <git URL>
 
 To create your own image you can use the cloud-efi.json template. The cloud-legacy.json template is for BIOS boot, otherwise you need to enable UEFI boot in your Openstack cloud.
 
-The template oscd.json is for BIOS boot and Openstack style ConfigDrive (fake cd).
+The template oscd.json is for BIOS boot and Openstack style ConfigDrive (fake cd). This one supports network_data.json, pretty handy if you can't or do not want to use DHCP.
 
 Example assuming you have openstack CLI tools installed and rc file loaded:
 
