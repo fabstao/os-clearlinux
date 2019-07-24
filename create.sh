@@ -19,7 +19,7 @@ main() {
 	if [ ! -d ${root} ]; then
 		mkdir -p ${root}
 	fi
-	sudo ister.py -t oscd.json -m -D ${root}
+	ister.py -t oscd.json -m -D ${root}
 	${GIT} config --global user.name "fsalam1"
 	${GIT} config --global user.email "fabian.salamanca@intel.com"
 	${GIT} config --global http.proxy "http://proxy-dmz.intel.com:911"
