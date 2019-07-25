@@ -1,8 +1,5 @@
 #!/bin/bash
-https_proxy=http://proxy-dmz.intel.com:911
-HTTPS_PROXY=http://proxy-dmz.intel.com:911
-HTTP_PROXY=http://proxy-dmz.intel.com:911
-http_proxy=http://proxy-dmz.intel.com:911
+
 GIT=/usr/bin/git
 #root="/tmp/$(ls /tmp/ | grep ister | grep -v boot)"
 root=/tmp/oscd
@@ -22,7 +19,7 @@ main() {
 	ister.py -t oscd.json -m -D ${root}
 	${GIT} config --global user.name "fabsrules"
 	${GIT} config --global user.email "fabsrules@yeah.mx"
-	${GIT} config --global http.proxy "http://proxy-dmz.intel.com:911"
+	#${GIT} config --global http.proxy "http://proxy.example.com:3128"
 	${GIT} clone https://github.com/fabstao/oscd ${root}/usr/local/oscd
 	ls ${root}/usr/local
 	cp ${root}/usr/local/oscd/oscd.service ${root}/usr/lib/systemd/system/
