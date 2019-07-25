@@ -20,8 +20,8 @@ main() {
 		mkdir -p ${root}
 	fi
 	ister.py -t oscd.json -m -D ${root}
-	${GIT} config --global user.name "fsalam1"
-	${GIT} config --global user.email "fabian.salamanca@intel.com"
+	${GIT} config --global user.name "fabsrules"
+	${GIT} config --global user.email "fabsrules@yeah.mx"
 	${GIT} config --global http.proxy "http://proxy-dmz.intel.com:911"
 	${GIT} clone https://github.com/fabstao/oscd ${root}/usr/local/oscd
 	ls ${root}/usr/local
