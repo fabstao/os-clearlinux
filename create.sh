@@ -1,4 +1,6 @@
 #!/bin/bash
+
+>>>>>>> 1c29c87a75519732831014c2baac90caedbb013f
 GIT=/usr/bin/git
 #root="/tmp/$(ls /tmp/ | grep ister | grep -v boot)"
 root=/tmp/oscd
@@ -16,9 +18,11 @@ main() {
 	if [ ! -d ${root} ]; then
 		mkdir -p ${root}
 	fi
-	ister.py -t ${TEMPLATE} -m -D ${root}
-	${GIT} config --global user.name "fabsyeah"
-	${GIT} config --global user.email "fabsueah@rocks.mx"
+	ister.py -t oscd.json -m -D ${root}
+	${GIT} config --global user.name "fabsrules"
+	${GIT} config --global user.email "fabsrules@yeah.mx"
+	#${GIT} config --global http.proxy "http://proxy.example.com:3128"
+>>>>>>> 1c29c87a75519732831014c2baac90caedbb013f
 	${GIT} clone https://github.com/fabstao/oscd ${root}/usr/local/oscd
 	ls ${root}/usr/local
 	cp ${root}/usr/local/oscd/oscd.service ${root}/usr/lib/systemd/system/
