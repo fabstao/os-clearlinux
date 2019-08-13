@@ -1,13 +1,10 @@
 #!/bin/bash
-https_proxy=http://proxy-dmz.intel.com:911
-HTTPS_PROXY=http://proxy-dmz.intel.com:911
-HTTP_PROXY=http://proxy-dmz.intel.com:911
-http_proxy=http://proxy-dmz.intel.com:911
 GIT=/usr/bin/git
 #root="/tmp/$(ls /tmp/ | grep ister | grep -v boot)"
 root=/tmp/oscd
 WANTS=${root}/etc/systemd/system/multi-user.target.wants
 echo ${root}
+TEMPLATE=oscd-cn.json
 
 unmountd() {
 	umount ${root}/boot
@@ -19,10 +16,9 @@ main() {
 	if [ ! -d ${root} ]; then
 		mkdir -p ${root}
 	fi
-	ister.py -t oscd.json -m -D ${root}
-	${GIT} config --global user.name "fsalam1"
-	${GIT} config --global user.email "fabian.salamanca@intel.com"
-	${GIT} config --global http.proxy "http://proxy-dmz.intel.com:911"
+	ister.py -t ${TEMPLATE} -m -D ${root}
+	${GIT} config --global user.name "fabsyeah"
+	${GIT} config --global user.email "fabsueah@rocks.mx"
 	${GIT} clone https://github.com/fabstao/oscd ${root}/usr/local/oscd
 	ls ${root}/usr/local
 	cp ${root}/usr/local/oscd/oscd.service ${root}/usr/lib/systemd/system/
@@ -34,6 +30,8 @@ main() {
 		cd ${WANTS} && ln -s /usr/lib/systemd/system/oscd.service 
 	fi
 	sleep 4 
+	unmountd
+	sleep 1
 	unmountd
 }
 

@@ -1,32 +1,32 @@
 {
  "DestinationType" : "virtual",
  "PartitionLayout" : [
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
    "partition" : 1,
    "size" : "600M",
    "type" : "linux" },
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
      "partition" : 2,
-     "size" : "2100M",
+     "size" : "3300M",
      "type" : "linux" }
  ],
  "FilesystemTypes" : [
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
    "partition" : 1,
    "type" : "ext4" },
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
      "partition" : 2,
      "type" : "ext4" }
  ],
  "PartitionMountPoints" : [
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
    "partition" : 1,
    "mount" : "/boot" },
-   { "disk" : "oscd-clr-cloud-jslave.img",
+   { "disk" : "oscd-clr-cloud-jscn.img",
      "partition" : 2,
      "mount" : "/" }
  ],
- "Version": 30580,
+ "Version": 30630,
  "Bundles": [
    "kernel-kvm",
    "os-core",
@@ -37,6 +37,7 @@
    "git",
    "sudo",
    "java11-basic",
+   "cloud-native-basic",
    "bootloader"
  ],
  "LegacyBios": true
